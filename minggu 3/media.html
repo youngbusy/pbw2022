@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Latihan HTML minggu 3</title>
+	</head>
+	<style>
+body {
+    background-image: url('1.jpg');
+    background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+}
+
+h1 {
+    color: aliceblue;
+    font-family:'Courier New', Courier, monospace
+}
+
+h1 {
+    width:35%;
+    background-color:black;
+      border-radius:50px;
+      padding:1px;
+}
+
+#tag {
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+	 width:45%;
+    background-color:black;
+      border-radius:50px;
+      padding:1px;
+}
+
+video {
+border-radius: 20px;
+overflow: hidden;
+position: relative;
+}
+
+button {
+	background-color: #000000;
+  border-radius: 20px;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+	</style>
+	<body>
+		<center>
+		<table>
+		<h1>DIHAJAR OLEH DIRI SENDIRI</h1>
+		<h4 id="tag">Lintang Hernanda Pamungkas ~ A11.2022.1476 ~ Pemrograman Berbasis Web</h4>
+		<video id="myVideo" width="260">
+			<source src = "ngwab.mp4" type = " video/mp4 ">
+			Video file not support...
+		</video>
+		<p>
+		<button onclick="playPause()" type="button">Play/Pause Video</button>
+		<button onclick="checkDuration()" type="button">Duration Video</button> <br> <br>
+		<button onclick="controlsEnable()" type="button">Controls On</button>
+		<button onclick="controlsDisable()" type="button">Controls Off</button>
+		<button onclick="enableMute()" type="button">Sound Off</button>
+		<button onclick="disableMute()" type="button">Sound On</button>
+		</p>
+	</center>
+	</body>
+<script>
+	var vid = document.getElementById("myVideo");
+
+	function playPause() {
+		if (myVideo.paused)
+			myVideo.play();
+		else
+			myVideo.pause();
+	}
+
+	function pauseVid() {
+		vid.pause() ;
+	}
+
+	function checkDuration() {
+		alert (vid.duration) ;
+	}
+
+	function controlsEnable() {
+		vid.controls = true;
+		vid.load();
+	}
+
+	function controlsDisable() {
+		vid.controls = false;
+		vid.load();
+	}
+
+	function enableMute() {
+		vid.muted = true;
+	}
+
+	function disableMute() {
+		vid.muted = false;
+	}
+
+
+</script>
+</html>
