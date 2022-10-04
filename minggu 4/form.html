@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - HTML 5</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+    <h2>Element Form - HTML 5</h2>
+    <form name="fmls" method="post" action="proses.php">
+        <table width="50%">
+            <tr>
+                <td>NIM :</td>
+                <td><input type="number" name="fnim" required placeholder="masukkan nim"></td>
+            </tr>
+            <tr>
+                <td>Nama :</td>
+                <td><input type="text" name="fnama" required placeholder="masukkan nama"></td>
+            </tr>
+            <tr>
+                <td>Tgl Lahir :</td>
+                <td><input type="date" name="ftgllahir" required></td>
+            </tr>
+            <tr>
+                <td>Prodi :</td>
+                <td>
+                    <select name="fprodi" required>
+                        <option>Pilih</option>
+                        <option value="A11">S1 - Teknik Informatika</option>
+                        <option value="A12">S1 - Sisitem Informasi</option>
+                        <option value="A22">D4 - Teknik Informatika</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Bidang Minat :</td>
+                <td> 
+                    <input type="checkbox" name="fbid1" value="01"><label>Web Programming</label><br>
+                    <input type="checkbox" name="fbid2" name="02"><label>Mobile Programming</label><br>
+                    <input type="checkbox" name="fbid3" name="03"><label>Data Science</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Berkas CV :</td>
+                <td><input type="file" name="fcv" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="left">
+                    <input type="hidden" value="rahasia" name="fhidden">
+                    <input type="submit" name="fsubmit" value="Kirim"></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
