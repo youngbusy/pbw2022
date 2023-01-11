@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evolueazy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/icon.png">
+</head>
+
+<body>
+    <!--header-->
+    <div class="header spacersection">
+        <div class="container">
+            <div class="nav d-flex ai-center jc-spacebetween">
+                <div class="nav-brand">
+                        <h1><a href=""><b>Evolueazy</b></a></h1>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="payment.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="search-container">
+                    <form action="/action_page.php">
+                      <input type="text" placeholder="Search.." name="search">
+                      <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <!--end header-->
+    <!--hero-->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+        <div class="text">
+            <p>Welcome to Evolueazy <br> Limited Edition band Merchandise.</p>
+        </div>
+          <img src="band.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="band2.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="band3.jpg" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+
+            <!--catalog-->
+            <section class="container">
+                <div class="gallery--title">Clothes</div>
+                <hr>
+                <div class="gallery--grid">
+                    <div class="gallery--grid_col">
+                        <img src="assets/1.png"
+                            alt="clothes" class="gallery--grid_col-img">
+                        <div class="gallery--grid_col-text">
+                            <div class="text-title">Feast.</div>
+                            <div class="text-subtitle">Live</div>
+                            <div class="text-price">Rp 175.000</div>
+                        </div>
+                    </div>
+                    <div class="gallery--grid_col">
+                        <img src="assets/2.png"
+                            alt="clothes" class="gallery--grid_col-img">
+                        <div class="gallery--grid_col-text">
+                            <div class="text-title">Lomba Sihir.</div>
+                            <div class="text-subtitle">Green Wood</div>
+                            <div class="text-price">Rp 150.000</div>
+                        </div>
+                    </div>
+                    <div class="gallery--grid_col">
+                        <img src="assets/3.png"
+                            alt="clothes" class="gallery--grid_col-img">
+                        <div class="gallery--grid_col-text">
+                            <div class="text-title">Sun Eater.</div>
+                            <div class="text-subtitle">Breath</div>
+                            <div class="text-price">Rp 145.000</div>
+                        </div>
+                    </div>
+                    <div class="gallery--grid_col">
+                        <img src="assets/4.png"
+                            alt="clothes" class="gallery--grid_col-img">
+                        <div class="gallery--grid_col-text">
+                            <div class="text-title">Feast.</div>
+                            <div class="text-subtitle">Holy</div>
+                            <div class="text-price">Rp 200.000</div>
+                        </div>
+                    </div>
+                    <div class="gallery--grid_col">
+                        <img src="assets/5.png"
+                            alt="clothes" class="gallery--grid_col-img">
+                        <div class="gallery--grid_col-text">
+                            <div class="text-title">Hindia.</div>
+                            <div class="text-subtitle">Bottle of Love</div>
+                            <div class="text-price">Rp 85.000</div>
+                        </div>
+                    </div>
+                    <div class="gallery--grid_col">
+                        <img src="assets/6.png"
+                            alt="clothes" class="gallery--grid_col-img">
+                        <div class="gallery--grid_col-text">
+                            <div class="text-title">Sun Eater.</div>
+                            <div class="text-subtitle">Shadows</div>
+                            <div class="text-price">Rp 145.000</div>
+                        </div>
+                    </div>
+                    <div class="gallery--grid_col">
+                        <img src="assets/7.png"
+                            alt="clothes" class="gallery--grid_col-img">
+                        <div class="gallery--grid_col-text">
+                            <div class="text-title">Hindia.</div>
+                            <div class="text-subtitle">Feeling Blue</div>
+                            <div class="text-price">Rp 150.000</div>
+                        </div>
+                    </div>
+                    <div class="gallery--grid_col">
+                        <img src="assets/8.png"
+                            alt="clothes" class="gallery--grid_col-img">
+                        <div class="gallery--grid_col-text">
+                            <div class="text-title">Lomba Sihir.</div>
+                            <div class="text-subtitle">Oriental</div>
+                            <div class="text-price">Rp 125.000</div>
+                        </div>
+                    </div>
+            </section>
+            <hr>
+            <!--gallery-->
+    <div class="glry--title">Gallery</div>
+        <div class="container">
+            <div class="nav">
+                <div class="gallery-image">
+                    <img src="sholeh.jpg" alt="" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </div>                
+            <!--footer-->
+            <div class="container">
+            <footer class="footer">
+                <div class="footer--contact">
+                    <div class="judul">Contact</div>
+                    <div class="tentang">
+                    <br>
+                    Evolueazy
+                    <br>
+                    -
+                    <br>
+                    Jl. Sadewa 3 No.16, Pendrikan Kidul, Kec.
+                    Semarang Tengah,
+                    <br> Kota Semarang,
+                    Jawa Tengah 50131
+                    </div>
+                </div>
+                <div class="footer--contact">
+                    <div class="judul"><br></div>
+                    <div class="tentang">
+                    <br>
+                    
+                    <br>
+                    
+                    <br>
+                    <a href="mailto:evolu@veryveryeazy.com">evolu@veryveryeazy.com</a>
+                    <br>
+                    <a href="https://www.instagram.com/pmngksh/" target="_blank">Instagram</a>
+                    <br>
+                    <a href="whatsapp:contact=+6281392831179@s.whatsapp.com&message=">WhatsApp</a>
+                    <br>
+                    </div>
+                </div>
+                <div class="footer--contact">
+                    <div class="judul"><br></div>
+                    <div class="tentang">
+                    <br>
+            
+                    <br>
+
+                    <br>
+                    Terms & Conditions
+                    <br>
+                    Privacy Policy
+                    <br>
+                    Copyright &copy; 2022 Evolueazy
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+</body>
+</html>
